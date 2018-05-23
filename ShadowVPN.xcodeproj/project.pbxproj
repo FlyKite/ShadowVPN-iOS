@@ -13,7 +13,6 @@
 		620A5B881B5A9F1E00F98476 /* crypto_secretbox_salsa208poly1305.c in Sources */ = {isa = PBXBuildFile; fileRef = 620A5B841B5A9F1E00F98476 /* crypto_secretbox_salsa208poly1305.c */; };
 		620A5B891B5A9F1E00F98476 /* crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = 620A5B861B5A9F1E00F98476 /* crypto.c */; };
 		620A5B901B5AA85800F98476 /* SVCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 620A5B8F1B5AA85800F98476 /* SVCrypto.m */; };
-		623DE1E61B78AAB200B1440F /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623DE1E51B78AAB200B1440F /* SimpleTableViewController.m */; };
 		625E05051B73D3C30041A9D6 /* checkmark_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 625E05031B73D3C30041A9D6 /* checkmark_empty@2x.png */; };
 		625E05061B73D3C30041A9D6 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 625E05041B73D3C30041A9D6 /* checkmark@2x.png */; };
 		626520C21B73AB890064F653 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626520C11B73AB890064F653 /* MainViewController.swift */; };
@@ -31,6 +30,7 @@
 		62D8D2A01B7748CA009FA6FE /* iplist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62D8D29F1B7748CA009FA6FE /* iplist.txt */; };
 		62D8D2A21B774A2F009FA6FE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D8D2A11B774A2F009FA6FE /* libresolv.tbd */; };
 		62F7E9891BB58DBE007A19E7 /* tunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 62A4276D1B5A3ED800BB4AD9 /* tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A60BD4C920B50B35003D6D61 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60BD4C820B50B35003D6D61 /* SimpleTableViewController.swift */; };
 		A6330D5520A076D900A11425 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6330D5420A076D900A11425 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,8 +70,6 @@
 		620A5B8E1B5AA85800F98476 /* SVCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVCrypto.h; sourceTree = "<group>"; };
 		620A5B8F1B5AA85800F98476 /* SVCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVCrypto.m; sourceTree = "<group>"; };
 		623DE1E31B78AAB100B1440F /* ShadowVPN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShadowVPN-Bridging-Header.h"; sourceTree = "<group>"; };
-		623DE1E41B78AAB200B1440F /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
-		623DE1E51B78AAB200B1440F /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 		625E05031B73D3C30041A9D6 /* checkmark_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark_empty@2x.png"; sourceTree = "<group>"; };
 		625E05041B73D3C30041A9D6 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
 		626520C11B73AB890064F653 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +93,7 @@
 		62D8D29D1B77433E009FA6FE /* ChinaDNSRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinaDNSRunner.m; sourceTree = "<group>"; };
 		62D8D29F1B7748CA009FA6FE /* iplist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iplist.txt; sourceTree = "<group>"; };
 		62D8D2A11B774A2F009FA6FE /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		A60BD4C820B50B35003D6D61 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		A6330D5420A076D900A11425 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		A6330D5620A0779F00A11425 /* ShadowVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShadowVPN.entitlements; sourceTree = "<group>"; };
 		F8715C8B6D2ECED571986A72 /* Pods-tunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunnel.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunnel/Pods-tunnel.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,8 +208,7 @@
 		62D48D7E1B739528003E4FEE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				623DE1E41B78AAB200B1440F /* SimpleTableViewController.h */,
-				623DE1E51B78AAB200B1440F /* SimpleTableViewController.m */,
+				A60BD4C820B50B35003D6D61 /* SimpleTableViewController.swift */,
 				626520C11B73AB890064F653 /* MainViewController.swift */,
 				626520C31B73ABA10064F653 /* ConfigurationViewController.swift */,
 				62D8D2681B76286F009FA6FE /* ConfigurationTextCell.swift */,
@@ -431,7 +429,7 @@
 			files = (
 				620629BD1B789DE50034179B /* NSData+Hex.swift in Sources */,
 				62D8D2691B76286F009FA6FE /* ConfigurationTextCell.swift in Sources */,
-				623DE1E61B78AAB200B1440F /* SimpleTableViewController.m in Sources */,
+				A60BD4C920B50B35003D6D61 /* SimpleTableViewController.swift in Sources */,
 				62A427511B5A3C9700BB4AD9 /* AppDelegate.swift in Sources */,
 				626520C41B73ABA10064F653 /* ConfigurationViewController.swift in Sources */,
 				620629BC1B789A320034179B /* ConfigurationValidator.swift in Sources */,

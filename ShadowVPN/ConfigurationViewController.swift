@@ -12,14 +12,14 @@ import NetworkExtension
 
 class ConfigurationViewController: UITableViewController {
     var providerManager: NETunnelProviderManager?
-    var bindMap = [String: UITextField]()
-    var configuration = [String: Any]()
+    var bindMap: [String: UITextField] = [:]
+    var configuration: [String: Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save))
         self.title = providerManager?.protocolConfiguration?.serverAddress
-        let conf:NETunnelProviderProtocol = self.providerManager?.protocolConfiguration as! NETunnelProviderProtocol
+        let conf: NETunnelProviderProtocol = self.providerManager?.protocolConfiguration as! NETunnelProviderProtocol
         // Dictionary in Swift is a struct. This is a copy
         self.configuration = conf.providerConfiguration!
     }
@@ -170,25 +170,23 @@ class ConfigurationViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if (indexPath.section == 0) {
             if (indexPath.row == 9) {
-                let controller = SimpleTableViewController(labels: ["Default", "CHNRoutes"], values: ["default", "chnroutes"], initialValue: self.configuration["route"] as? NSString, selectionBlock: { (result) -> Void in
+                let controller = SimpleTableViewController(labels: ["Default", "CHNRoutes"], values: ["default", "chnroutes"], initialValue: self.configuration["route"] as? String, selectionHandler: { (result) -> Void in
                     // else we'll lost unsaved modifications
                     self.updateConfiguration()
                     self.configuration["route"] = result
                     self.tableView.reloadData()
                 })
-                self.navigationController?.pushViewController(controller!, animated: true)
+                self.navigationController?.pushViewController(controller, animated: true)
             }
         } else if (indexPath.section == 1) {
             let alertController = UIAlertController(title: nil, message: "Delete this configuration?", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
-                self.providerManager?.removeFromPreferences(completionHandler: { (error) -> Void in
+            alertController.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
+                self.providerManager?.removeFromPreferences(completionHandler: { (error) in
                     self.navigationController?.popViewController(animated: true)
                 })
             }))
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
-            }))
-            self.present(alertController, animated: true, completion: { () -> Void in
-            })
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
