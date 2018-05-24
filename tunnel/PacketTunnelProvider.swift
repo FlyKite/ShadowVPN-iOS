@@ -9,8 +9,8 @@
 import NetworkExtension
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
-    var session: NWUDPSession? = nil
-    var conf = [String: Any]()
+    var session: NWUDPSession?
+    var conf: [String: Any] = [:]
     var pendingStartCompletion: ((Error?) -> Void)?
     var userToken: Data?
     var chinaDNS: ChinaDNSRunner?
@@ -70,17 +70,17 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         let newSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: self.protocolConfiguration.serverAddress!)
         newSettings.ipv4Settings = NEIPv4Settings(addresses: [conf["ip"] as! String], subnetMasks: [conf["subnet"] as! String])
         routeManager = RouteManager(route: conf["route"] as? String, IPv4Settings: newSettings.ipv4Settings!)
-        if conf["mtu"] != nil {
-            newSettings.mtu = NSNumber(value: Int(conf["mtu"] as! String)!)
+        if let mtuStr = conf["mtu"] as? String, let mtu = Int(mtuStr) {
+            newSettings.mtu = NSNumber(value: mtu)
         } else {
             newSettings.mtu = 1432
         }
         if "chnroutes" == (conf["route"] as? String) {
             NSLog("using ChinaDNS")
             newSettings.dnsSettings = NEDNSSettings(servers: ["127.0.0.1"])
-        } else {
+        } else if let dns = conf["dns"] as? String {
             NSLog("using DNS")
-            newSettings.dnsSettings = NEDNSSettings(servers: (conf["dns"] as! String).components(separatedBy: ","))
+            newSettings.dnsSettings = NEDNSSettings(servers: dns.components(separatedBy: ","))
         }
         NSLog("setTunnelNetworkSettings")
         self.setTunnelNetworkSettings(newSettings) { (error) in
@@ -139,8 +139,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let object = object {
-            if object as! NSObject == self {
+        if let object = object as? NSObject {
+            if object == self {
                 if let keyPath = keyPath {
                     if keyPath == "defaultPath" {
                         // commented out since when switching from 4G to Wi-Fi, this will be called multiple times, only the last time works

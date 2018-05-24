@@ -11,10 +11,11 @@ import UIKit
 let labelWidth = CGFloat(120.0)
 
 class ConfigurationTextCell: UITableViewCell {
-    var textField: UITextField = UITextField()
     
-    init() {
-        super.init(style: .default, reuseIdentifier: nil)
+    let textField: UITextField = UITextField()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.contentView.addSubview(textField)
     }
     
@@ -24,11 +25,17 @@ class ConfigurationTextCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let oldFrame = self.textLabel?.frame
-        self.textLabel?.frame = CGRect(x: oldFrame!.origin.x, y: oldFrame!.origin.y, width: labelWidth, height: (oldFrame?.height)!)
-        textField.frame = CGRect(x: oldFrame!.origin.x + labelWidth + 10,
-            y: (oldFrame?.origin.y)!,
-            width: self.frame.width - (oldFrame!.origin.x + labelWidth + 10),
-            height: (oldFrame?.height)!)
+        guard let label = self.textLabel else {
+            return
+        }
+        let oldFrame = label.frame
+        label.frame = CGRect(x: oldFrame.origin.x,
+                             y: oldFrame.origin.y,
+                             width: labelWidth,
+                             height: oldFrame.height)
+        textField.frame = CGRect(x: oldFrame.origin.x + labelWidth + 10,
+                                 y: oldFrame.origin.y,
+                                 width: self.frame.width - oldFrame.origin.x + labelWidth + 10,
+                                 height: oldFrame.height)
     }
 }
