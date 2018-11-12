@@ -1,8 +1,8 @@
 ShadowVPN for iOS  
 ![Platform](https://img.shields.io/badge/iOS-9.0-lightgray.svg)
-![Language](https://img.shields.io/badge/Language-Swift_4-orange.svg)
+![Language](https://img.shields.io/badge/Language-Swift_4.2-orange.svg)
 ![Build](https://img.shields.io/badge/Build-Success-brightgreen.svg)
-![Xcode](https://img.shields.io/badge/Xcode-9.3-blue.svg)
+![Xcode](https://img.shields.io/badge/Xcode-10.1-blue.svg)
 [![License](https://img.shields.io/badge/License-GPL_v3-green.svg)](https://github.com/FlyKite/ShadowVPN-iOS/master/blob/master/LICENSE)
 =================
 
