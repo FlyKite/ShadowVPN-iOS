@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5EA8D9810A0C84460A50A3DA /* libPods-tunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC75A2A2AB75447D9D64CB9 /* libPods-tunnel.a */; };
 		620629BC1B789A320034179B /* ConfigurationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620629BB1B789A320034179B /* ConfigurationValidator.swift */; };
 		620629BD1B789DE50034179B /* NSData+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8D26A1B771B63009FA6FE /* NSData+Hex.swift */; };
 		620A5B881B5A9F1E00F98476 /* crypto_secretbox_salsa208poly1305.c in Sources */ = {isa = PBXBuildFile; fileRef = 620A5B841B5A9F1E00F98476 /* crypto_secretbox_salsa208poly1305.c */; };
@@ -32,6 +31,8 @@
 		62F7E9891BB58DBE007A19E7 /* tunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 62A4276D1B5A3ED800BB4AD9 /* tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A60BD4C920B50B35003D6D61 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60BD4C820B50B35003D6D61 /* SimpleTableViewController.swift */; };
 		A6330D5520A076D900A11425 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6330D5420A076D900A11425 /* NetworkExtension.framework */; };
+		AB2AE7814EC8A97680674F72 /* libPods-tunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CBA318BF54382F1B5AF32F /* libPods-tunnel.a */; };
+		C26DCA8D7FB941CDEBB06F60 /* libPods-ShadowVPN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42096B0DD905FA971B402AB0 /* libPods-ShadowVPN.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		52E22CBCA9CEB75CB469204A /* Pods-tunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunnel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunnel/Pods-tunnel.debug.xcconfig"; sourceTree = "<group>"; };
-		5FC75A2A2AB75447D9D64CB9 /* libPods-tunnel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tunnel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42096B0DD905FA971B402AB0 /* libPods-ShadowVPN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShadowVPN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		462DCB6C067AA9583774906C /* Pods-tunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunnel.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunnel/Pods-tunnel.release.xcconfig"; sourceTree = "<group>"; };
 		620629BB1B789A320034179B /* ConfigurationValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationValidator.swift; sourceTree = "<group>"; };
 		620A5B821B5A9E3100F98476 /* tunnel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tunnel-Bridging-Header.h"; sourceTree = "<group>"; };
 		620A5B841B5A9F1E00F98476 /* crypto_secretbox_salsa208poly1305.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_secretbox_salsa208poly1305.c; sourceTree = "<group>"; };
@@ -93,10 +94,13 @@
 		62D8D29D1B77433E009FA6FE /* ChinaDNSRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChinaDNSRunner.m; sourceTree = "<group>"; };
 		62D8D29F1B7748CA009FA6FE /* iplist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iplist.txt; sourceTree = "<group>"; };
 		62D8D2A11B774A2F009FA6FE /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		8C36F9C5C8118C5BB6BF7967 /* Pods-ShadowVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowVPN.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShadowVPN/Pods-ShadowVPN.release.xcconfig"; sourceTree = "<group>"; };
+		92EA19448C55590FCF3E36ED /* Pods-ShadowVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadowVPN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShadowVPN/Pods-ShadowVPN.debug.xcconfig"; sourceTree = "<group>"; };
 		A60BD4C820B50B35003D6D61 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		A6330D5420A076D900A11425 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		A6330D5620A0779F00A11425 /* ShadowVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShadowVPN.entitlements; sourceTree = "<group>"; };
-		F8715C8B6D2ECED571986A72 /* Pods-tunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunnel.release.xcconfig"; path = "Pods/Target Support Files/Pods-tunnel/Pods-tunnel.release.xcconfig"; sourceTree = "<group>"; };
+		DA156D19BD3CF872917EB4F1 /* Pods-tunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tunnel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tunnel/Pods-tunnel.debug.xcconfig"; sourceTree = "<group>"; };
+		F7CBA318BF54382F1B5AF32F /* libPods-tunnel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tunnel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6330D5520A076D900A11425 /* NetworkExtension.framework in Frameworks */,
+				C26DCA8D7FB941CDEBB06F60 /* libPods-ShadowVPN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,19 +118,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D8D2A21B774A2F009FA6FE /* libresolv.tbd in Frameworks */,
-				5EA8D9810A0C84460A50A3DA /* libPods-tunnel.a in Frameworks */,
+				AB2AE7814EC8A97680674F72 /* libPods-tunnel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EEFC1CABB0A90BEA3E66B08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92EA19448C55590FCF3E36ED /* Pods-ShadowVPN.debug.xcconfig */,
+				8C36F9C5C8118C5BB6BF7967 /* Pods-ShadowVPN.release.xcconfig */,
+				DA156D19BD3CF872917EB4F1 /* Pods-tunnel.debug.xcconfig */,
+				462DCB6C067AA9583774906C /* Pods-tunnel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		486E76D16A13A84BC2514505 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A6330D5420A076D900A11425 /* NetworkExtension.framework */,
 				62D8D2A11B774A2F009FA6FE /* libresolv.tbd */,
-				5FC75A2A2AB75447D9D64CB9 /* libPods-tunnel.a */,
+				42096B0DD905FA971B402AB0 /* libPods-ShadowVPN.a */,
+				F7CBA318BF54382F1B5AF32F /* libPods-tunnel.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,8 +176,8 @@
 				62A4274F1B5A3C9700BB4AD9 /* ShadowVPN */,
 				62A4276E1B5A3ED800BB4AD9 /* tunnel */,
 				62A4274E1B5A3C9700BB4AD9 /* Products */,
-				C8337FA84DBF382377A3AB97 /* Pods */,
 				486E76D16A13A84BC2514505 /* Frameworks */,
+				0EEFC1CABB0A90BEA3E66B08 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,15 +276,6 @@
 			name = Route;
 			sourceTree = "<group>";
 		};
-		C8337FA84DBF382377A3AB97 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				52E22CBCA9CEB75CB469204A /* Pods-tunnel.debug.xcconfig */,
-				F8715C8B6D2ECED571986A72 /* Pods-tunnel.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,6 +283,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62A4275F1B5A3C9700BB4AD9 /* Build configuration list for PBXNativeTarget "ShadowVPN" */;
 			buildPhases = (
+				4E90FD687AC735D85FE8B14F /* [CP] Check Pods Manifest.lock */,
 				62A427491B5A3C9700BB4AD9 /* Sources */,
 				62A4274A1B5A3C9700BB4AD9 /* Frameworks */,
 				62A4274B1B5A3C9700BB4AD9 /* Resources */,
@@ -294,11 +303,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62A427771B5A3ED800BB4AD9 /* Build configuration list for PBXNativeTarget "tunnel" */;
 			buildPhases = (
-				E4EB07B6CDD86D9D38054741 /* Check Pods Manifest.lock */,
+				238937FB3210206E336553EF /* [CP] Check Pods Manifest.lock */,
 				62A427691B5A3ED800BB4AD9 /* Sources */,
 				62A4276A1B5A3ED800BB4AD9 /* Frameworks */,
 				62A4276B1B5A3ED800BB4AD9 /* Resources */,
-				0F5A1901A991DD08B2C3112B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,34 +398,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F5A1901A991DD08B2C3112B /* Copy Pods Resources */ = {
+		238937FB3210206E336553EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tunnel-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"${SRCROOT}/Pods/Target Support Files/Pods-tunnel/Pods-tunnel-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E4EB07B6CDD86D9D38054741 /* Check Pods Manifest.lock */ = {
+		4E90FD687AC735D85FE8B14F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShadowVPN-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -561,6 +575,7 @@
 		};
 		62A427601B5A3C9700BB4AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92EA19448C55590FCF3E36ED /* Pods-ShadowVPN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -581,12 +596,13 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "ShadowVPN/ShadowVPN-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		62A427611B5A3C9700BB4AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C36F9C5C8118C5BB6BF7967 /* Pods-ShadowVPN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -606,13 +622,13 @@
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShadowVPN/ShadowVPN-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		62A427781B5A3ED800BB4AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52E22CBCA9CEB75CB469204A /* Pods-tunnel.debug.xcconfig */;
+			baseConfigurationReference = DA156D19BD3CF872917EB4F1 /* Pods-tunnel.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = tunnel/tunnel.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -635,7 +651,7 @@
 		};
 		62A427791B5A3ED800BB4AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8715C8B6D2ECED571986A72 /* Pods-tunnel.release.xcconfig */;
+			baseConfigurationReference = 462DCB6C067AA9583774906C /* Pods-tunnel.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = tunnel/tunnel.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

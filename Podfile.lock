@@ -4,7 +4,13 @@ PODS:
 DEPENDENCIES:
   - libsodium
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - libsodium
+
 SPEC CHECKSUMS:
   libsodium: be547e31dc75725629acc5717dc0a40fc05ef243
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: e7d0a5d72765e37bb84101bbd357cde346210255
+
+COCOAPODS: 1.5.3
