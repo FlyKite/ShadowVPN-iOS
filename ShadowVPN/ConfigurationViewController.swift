@@ -19,9 +19,9 @@ class ConfigurationViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save))
         self.title = providerManager?.protocolConfiguration?.serverAddress
-        let conf: NETunnelProviderProtocol = self.providerManager?.protocolConfiguration as! NETunnelProviderProtocol
+        let conf = self.providerManager?.protocolConfiguration as? NETunnelProviderProtocol
         // Dictionary in Swift is a struct. This is a copy
-        self.configuration = conf.providerConfiguration!
+        self.configuration = conf?.providerConfiguration ?? [:]
     }
     
     func updateConfiguration() {
@@ -41,7 +41,7 @@ class ConfigurationViewController: UITableViewController {
             })
             return
         }
-        (self.providerManager?.protocolConfiguration as! NETunnelProviderProtocol).providerConfiguration = self.configuration
+        (self.providerManager?.protocolConfiguration as? NETunnelProviderProtocol)?.providerConfiguration = self.configuration
         self.providerManager?.protocolConfiguration?.serverAddress = self.configuration["server"] as? String
         self.providerManager?.localizedDescription = self.configuration["server"] as? String
         
