@@ -170,7 +170,8 @@ class ConfigurationViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if (indexPath.section == 0) {
             if (indexPath.row == 9) {
-                let controller = SimpleTableViewController(labels: ["Default", "CHNRoutes"], values: ["default", "chnroutes"], initialValue: self.configuration["route"] as? String, selectionHandler: { (result) -> Void in
+                let controller = SimpleTableViewController(labels: ["Default", "CHNRoutes"], values: ["default", "chnroutes"], initialValue: self.configuration["route"] as? String, selectionHandler: { [weak self] (result) -> Void in
+                    guard let `self` = self else { return }
                     // else we'll lost unsaved modifications
                     self.updateConfiguration()
                     self.configuration["route"] = result
