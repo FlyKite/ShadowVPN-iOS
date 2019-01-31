@@ -20,16 +20,16 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     
     override func startTunnel(options: [String : NSObject]? = nil, completionHandler: @escaping (Error?) -> Void) {
         queue = DispatchQueue(label: "shadowvpn.queue")
-        conf = (self.protocolConfiguration as! NETunnelProviderProtocol).providerConfiguration!
+        conf = (self.protocolConfiguration as? NETunnelProviderProtocol)?.providerConfiguration ?? [:]
         self.pendingStartCompletion = completionHandler
         chinaDNS = ChinaDNSRunner(dns: conf["dns"] as? String)
         if let userTokenString = conf["usertoken"] as? String {
             if userTokenString.count == 16 {
-                userToken = NSData.fromHexString(string: userTokenString) as Data
+                userToken = Data(fromHex: userTokenString)
             }
         }
         NSLog("setPassword")
-        SVCrypto.setPassword(conf["password"] as! String)
+        SVCrypto.setPassword(conf["password"] as? String ?? "")
         self.recreateUDP()
         let keyPath = "defaultPath"
         let options = NSKeyValueObservingOptions([.new, .old])
@@ -68,7 +68,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     func updateNetwork() {
         NSLog("updateNetwork")
         let newSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: self.protocolConfiguration.serverAddress!)
-        newSettings.ipv4Settings = NEIPv4Settings(addresses: [conf["ip"] as! String], subnetMasks: [conf["subnet"] as! String])
+        newSettings.ipv4Settings = NEIPv4Settings(addresses: [conf["ip"] as? String ?? ""], subnetMasks: [conf["subnet"] as? String ?? ""])
         routeManager = RouteManager(route: conf["route"] as? String, IPv4Settings: newSettings.ipv4Settings!)
         if let mtuStr = conf["mtu"] as? String, let mtu = Int(mtuStr) {
             newSettings.mtu = NSNumber(value: mtu)

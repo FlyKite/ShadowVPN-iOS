@@ -27,9 +27,8 @@ class ConfigurationValidator: NSObject {
     
     // return nil if there's no error
     class func validate(configuration: [String: Any]) -> String? {
-        let configuration = configuration as [String: AnyObject]
         // 1. server must be not empty
-        guard let server = configuration["server"], server.length > 0 else {
+        guard let server = configuration["server"] as? String, server.count > 0 else {
             return "Server must not be empty"
         }
         // 2. port must be int 1, 65535
@@ -40,14 +39,13 @@ class ConfigurationValidator: NSObject {
             return "Port is invalid"
         }
         // 3. password must be not empty
-        guard let password = configuration["password"], password.length > 0 else {
+        guard let password = configuration["password"] as? String, password.count > 0 else {
             return "Password must not be empty"
         }
         // 4. usertoken must be empty or hex of 8 bytes
         if let usertoken = configuration["usertoken"] as? String {
-            if NSData.fromHexString(string: usertoken).length != 8
-                && NSData.fromHexString(string: usertoken).length != 0 {
-                
+            let data = Data(fromHex: usertoken)
+            if data.count != 8 && data.count != 0 {
                 return "Usertoken must be HEX of 8 bytes (example: 7e335d67f1dc2c01)"
             }
         }
