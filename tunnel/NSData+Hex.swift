@@ -22,6 +22,6 @@ extension Data {
                 temp = ""
             }
         }
-        self.init(bytes: bytes)
+        self.init(bytes)
     }
 }

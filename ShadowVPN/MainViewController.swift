@@ -156,14 +156,18 @@ class MainViewController: UITableViewController {
             configurationController.providerManager = manager
             self.navigationController?.pushViewController(configurationController, animated: true)
             manager.saveToPreferences(completionHandler: { (error) -> Void in
-                print(error)
+                if let error = error {
+                    print(error)
+                }
             })
         }
     }
     
     func loadConfigurationFromSystem() {
         NETunnelProviderManager.loadAllFromPreferences() { newManagers, error in
-            print(error)
+            if let error = error {
+                print(error)
+            }
             guard let vpnManagers = newManagers else { return }
             self.vpnManagers.removeAll()
             for vpnManager in vpnManagers {

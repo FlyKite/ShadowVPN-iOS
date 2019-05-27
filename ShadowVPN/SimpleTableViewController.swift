@@ -15,7 +15,6 @@ class SimpleTableViewController: UITableViewController {
     private var selectedValue: String?
     private var selectionHandler: (String) -> Void
     
-    
     init(labels: [String], values: [String], initialValue: String?, selectionHandler: @escaping (String) -> Void) {
         self.labels = labels
         self.values = values
